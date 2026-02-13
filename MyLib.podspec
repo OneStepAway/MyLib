@@ -7,36 +7,18 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'MyLib'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of MyLib.'
+  s.name         = 'MyLib'
+  s.version      = '0.1.0'
+  s.summary      = '简要说明'
+  s.description  = '详细说明，这是一个私有库'
+  s.homepage     = 'https://github.com/OneStepAway/MyLib.git'
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.author       = { 'huoju' => '15227166680@163.com' }
+  s.source       = { :git => 'git@github.com:OneStepAway/MyLib.git', :tag => s.version.to_s }
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.platform     = :ios, '12.0'
+  s.requires_arc = true
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/HJ/MyLib'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'HJ' => '545119722@qq.com' }
-  s.source           = { :git => 'https://github.com/HJ/MyLib.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '10.0'
-
-  s.source_files = 'MyLib/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'MyLib' => ['MyLib/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = 'MyLib/Classes/**/*.{h,m}'
+  s.public_header_files = 'MyLib/Classes/**/*.h'
 end
